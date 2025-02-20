@@ -9,18 +9,15 @@ Identifying individual animals within large wildlife populations is essential fo
 
 ### Installation
 ```
-conda create -n 'your-env-name' python=3.8
+conda create -n 'your-env-name' python=3.8.19
 conda activate 'your-env-name'
-conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
-pip install yacs
-pip install timm
-pip install scikit-image
-pip install tqdm
-pip install ftfy
-pip install regex
+pip install -r requirements.txt
 ```
 
-### Training
+For GPU compatibility, please use CUDA 12.1.
+
+### Run Commands
+To run the code, use the following sample command:
 ```
 python train_mfareid.py --config_file configs/animal/vit_mfareid.yml
 ```
